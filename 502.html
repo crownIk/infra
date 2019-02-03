@@ -3,46 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <title>502 Error</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="https://bazaar.subutai.io/assets/img/favicon.ico?refresh=true">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 </head>
 <body>
-  <div>
-      <h2><i class="fas fa-exclamation-triangle"></i>502</h2>
-      <h3>Ooops, something went terribly wrong!</h3>
+  <div class="wrapper">
+      <div class="big_title">
+          <span>502</span>
+          <i class="fas fa-exclamation-triangle"></i>
+      </div>
   </div>
-  <h4>Service Unavailable</h4>
+    <div class="message">
+
+        <h4>
+            Service Unavailable.
+        </h4>
+        <p>We Apologize ...
+            <br>
+            Kindly wait 10 minutes and try again.
+            <br>
+            If the problem persists, please contact us on <a href=""><i class="fab fa-slack"></i> Slack</a>
+
+            <br>
+        </p>
+
+    </div>
 </body>
 </html>
 <style>
     body {
         font-family: monospace;
         background-image: url("https://bazaar.subutai.io/assets/img/login-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    h2 {
-        font-size: 10em;
+    .message {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .message p {
         color: #ffffff;
-        text-align: center;
+        font-size: 1.2em;
+        line-height: 25px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .message p a i {
+        color: #ffffff;
+        font-size: 1em;
+       margin-right: 5px;
+    }
+    a {
         display: flex;
         align-items: center;
         justify-content: center;
+        border: 1px solid #ffffff;
+        height: 40px;
+        width: 150px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+        margin: 25px 0px auto 20px;
+    }
+    a:hover {
+        border: 1px solid #15ACCB;
+    }
+
+
+    .big_title {
+        position: absolute;
+        top:10%;
+        left: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big_title span {
+        font-size: 10em;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .big_title i {
+        margin-left: 20px;
+        font-size:5.9em;
     }
     i {
         color: #15ACCB;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
     h3 {
+        padding: 20px;
+        display: block;
         color: #ffffff;
+        font-weight: normal;
     }
     h4 {
-        text-align: center;
+        text-align: left;
         font-size: 3em;
         color: #ffffff;
+        margin: 0px;
     }
-    div {
+    .wrapper {
+
         display: flex;
-        align-items: flex-end;
         justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 </style>
